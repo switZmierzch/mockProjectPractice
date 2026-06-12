@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SWITZMIERCH</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --black:#050505;
+    --white:#f5f5f5;
+    --gray:#9b9b9b;
+    --border:#222;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:100;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,.75);
+    border-bottom:1px solid var(--border);
+}
+
+.nav-container{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    font-family:'Cinzel',serif;
+    font-size:1.3rem;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:0 20px;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75));
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero img{
+    width:420px;
+    max-width:90%;
+    filter:invert(1);
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    letter-spacing:8px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:var(--gray);
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 35px;
+    border:1px solid white;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:black;
+}
+
+.section{
+    max-width:1400px;
+    margin:auto;
+    padding:100px 40px;
+}
+
+.section-title{
+    font-family:'Cinzel',serif;
+    font-size:2.5rem;
+    letter-spacing:4px;
+    margin-bottom:50px;
+    text-align:center;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    border:1px solid var(--border);
+    background:#0b0b0b;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card h3{
+    font-family:'Cinzel',serif;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+
+.price{
+    color:var(--gray);
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.about h3{
+    font-family:'Cinzel',serif;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.about p{
+    color:#bdbdbd;
+    line-height:1.8;
+}
+
+footer{
+    border-top:1px solid var(--border);
+    text-align:center;
+    padding:40px;
+    color:#777;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:3rem;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.nav-links{
+    display:none;
+}
+
+.section{
+    padding:80px 20px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">SWIITZMIERCH</div>
+
+        <div class="nav-links">
+            <a href="#collection">Collection</a>
+            <a href="#about">About</a>
+            <a href="#archive">Archive</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <!-- Replace with your logo -->
+        <img src="switZ.png" alt="SWIITZMIERCH">
+
+        <h1>SWIITZMIERCH</h1>
+
+        <p>Gothic Denim • Underground Archive • Monochrome Culture</p>
+
+        <a href="#collection" class="btn">
+            ENTER THE ARCHIVE
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section" id="collection">
+
+    <h2 class="section-title">DENIM COLLECTION</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="p1.jpg" alt="">
+            <div class="card-content">
+                <h3>VOID WIDE DENIM</h3>
+                <p class="price">$89</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="p2.jpg" alt="">
+            <div class="card-content">
+                <h3>FADED CATHEDRAL</h3>
+                <p class="price">$92</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="p3.jpg" alt="">
+            <div class="card-content">
+                <h3>SHADOW WASH</h3>
+                <p class="price">$95</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="p4.jpg" alt="">
+            <div class="card-content">
+                <h3>REQUIEM FIT</h3>
+                <p class="price">$98</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="p5.jpg" alt="">
+            <div class="card-content">
+                <h3>ARCHIVE DENIM</h3>
+                <p class="price">$85</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="about">
+
+    <h2 class="section-title">THE MANIFESTO</h2>
+
+    <div class="about">
+
+        <div>
+            <h3>THE BRAND</h3>
+
+            <p>
+                SWITZMIERCH exists between gothic luxury and underground
+                streetwear. Oversized silhouettes, washed denim, and
+                monochrome palettes form the foundation of every piece.
+            </p>
+        </div>
+
+        <div>
+            <h3>THE ARCHIVE</h3>
+
+            <p>
+                Designed for those who reject fast trends. Built around
+                timeless denim, darkness, and presence. Every garment
+                belongs to an evolving archive rather than a seasonal
+                collection.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="archive">
+
+    <h2 class="section-title">NO TRENDS. NO NOISE.</h2>
+
+    <div style="
+        text-align:center;
+        max-width:800px;
+        margin:auto;
+        color:#bdbdbd;
+        line-height:2;
+    ">
+        Heavy denim. Oversized proportions.
+        Monochrome expression.
+        Built for outsiders.
+    </div>
+
+</section>
+
+<footer>
+    © 2026 SWITZMIERCH — Concept Fashion Project
+</footer>
+
+</body>
+</html>
