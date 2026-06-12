@@ -32,6 +32,7 @@ body{
     overflow-x:hidden;
 }
 
+/* NAV */
 nav{
     position:fixed;
     width:100%;
@@ -71,6 +72,7 @@ nav{
     text-transform:uppercase;
 }
 
+/* HERO */
 .hero{
     min-height:100vh;
     display:flex;
@@ -98,6 +100,7 @@ nav{
 .hero img{
     width:420px;
     max-width:90%;
+    height:auto;
     filter:invert(1);
     margin-bottom:30px;
 }
@@ -130,6 +133,7 @@ nav{
     color:black;
 }
 
+/* SECTIONS */
 .section{
     max-width:1400px;
     margin:auto;
@@ -144,6 +148,7 @@ nav{
     text-align:center;
 }
 
+/* PRODUCTS */
 .products{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -165,6 +170,7 @@ nav{
     width:100%;
     height:500px;
     object-fit:cover;
+    display:block;
 }
 
 .card-content{
@@ -181,6 +187,7 @@ nav{
     color:var(--gray);
 }
 
+/* ABOUT */
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -198,6 +205,7 @@ nav{
     line-height:1.8;
 }
 
+/* FOOTER */
 footer{
     border-top:1px solid var(--border);
     text-align:center;
@@ -205,25 +213,59 @@ footer{
     color:#777;
 }
 
+/* =========================
+   MOBILE RESPONSIVE FIXES
+   ========================= */
 @media(max-width:768px){
 
-.hero h1{
-    font-size:3rem;
+    .nav-container{
+        padding:15px 20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .logo{
+        font-size:1rem;
+        letter-spacing:2px;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+        letter-spacing:4px;
+    }
+
+    .hero p{
+        font-size:.8rem;
+        letter-spacing:2px;
+        padding:0 10px;
+    }
+
+    .section{
+        padding:70px 20px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .card img{
+        height:320px;
+    }
+
+    .btn{
+        width:100%;
+        max-width:280px;
+        text-align:center;
+    }
+
+    .section-title{
+        font-size:1.8rem;
+    }
 }
 
-.about{
-    grid-template-columns:1fr;
-}
-
-.nav-links{
-    display:none;
-}
-
-.section{
-    padding:80px 20px;
-}
-
-}
 </style>
 </head>
 
@@ -242,22 +284,17 @@ footer{
 </nav>
 
 <section class="hero">
-
     <div class="hero-content">
 
-        <!-- Replace with your logo -->
         <img src="switZ.png" alt="SWIITZMIERCH">
 
         <h1>SWIITZMIERCH</h1>
 
         <p>Gothic Denim • Underground Archive • Monochrome Culture</p>
 
-        <a href="#collection" class="btn">
-            ENTER THE ARCHIVE
-        </a>
+        <a href="#collection" class="btn">ENTER THE ARCHIVE</a>
 
     </div>
-
 </section>
 
 <section class="section" id="collection">
@@ -307,7 +344,6 @@ footer{
         </div>
 
     </div>
-
 </section>
 
 <section class="section" id="about">
@@ -318,7 +354,6 @@ footer{
 
         <div>
             <h3>THE BRAND</h3>
-
             <p>
                 SWITZMIERCH exists between gothic luxury and underground
                 streetwear. Oversized silhouettes, washed denim, and
@@ -328,7 +363,6 @@ footer{
 
         <div>
             <h3>THE ARCHIVE</h3>
-
             <p>
                 Designed for those who reject fast trends. Built around
                 timeless denim, darkness, and presence. Every garment
@@ -338,23 +372,14 @@ footer{
         </div>
 
     </div>
-
 </section>
 
 <section class="section" id="archive">
 
     <h2 class="section-title">NO TRENDS. NO NOISE.</h2>
 
-    <div style="
-        text-align:center;
-        max-width:800px;
-        margin:auto;
-        color:#bdbdbd;
-        line-height:2;
-    ">
-        Heavy denim. Oversized proportions.
-        Monochrome expression.
-        Built for outsiders.
+    <div style="text-align:center;max-width:800px;margin:auto;color:#bdbdbd;line-height:2;">
+        Heavy denim. Oversized proportions. Monochrome expression. Built for outsiders.
     </div>
 
 </section>
